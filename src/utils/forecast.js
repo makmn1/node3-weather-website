@@ -14,7 +14,8 @@ const forecast = (latitude, longitude, callback) => {
             // console.log(url)
             const {temperature: temp, feelslike: apptemp} = current
             callback(undefined,
-                (current.weather_descriptions[0]+ '. It is currently ' +temp+ ' degrees out. It feels like ' +apptemp+ ' out.')
+                (current.weather_descriptions[0]+ '. It is currently ' +temp+ ' degrees out. It feels like ' +apptemp+ ' out.'
+                +' The humidity is ' +current.humidity+ '%.')
             )
         }
     })
